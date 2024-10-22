@@ -11,7 +11,9 @@ def plot_graph(x,y,title,xlabel="Time",ylabel="Amplitude",color="b",condition="l
     x_smooth = np.linspace(x.min(), x.max(), 1000)
     y_smooth = np.interp(x_smooth, x, y) # interpolates the points
 
-    plt.style.use('seaborn') # use seaborn style for ploting
+    #plt.style.use('seaborn') # use seaborn style for ploting
+    import seaborn as sns
+    sns.set_style('darkgrid')  # or any other seaborn style of your choice
     fig, ax = plt.subplots() #v create new figure and set of subplots
     fig = plt.figure(figsize=(20,3)) # mentioning figure sixe(20 inches, 3 inches)
     plot_axis(fig,ax) # calls plot_axis function
